@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: Default   # your self-hosted agent pool
+  name: karthikazure_poolagent   # your self-hosted agent pool
 
 steps:
 - task: Maven@3
@@ -18,7 +18,7 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'Path'
-    jdkDirectory: 'C:\jdk-11.0.30'
+    jdkDirectory: '/usr/bin/java'
     mavenVersionOption: 'Default'
 
 # 🔥 Publish WAR file
